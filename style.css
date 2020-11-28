@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P|Source+Code+Pro');
+
+* {
+    margin: 0;
+    padding: 0;
+    background: #f9f3e3;
+    font-family: 'Press Start 2P', cursive;
+    color: #333;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    background-image: url("./imgs/fondo-web-nexun.jpg");
+    background-position: center;
+}
+
+.container {
+    position: absolute;
+    height: 350px;
+    margin: 10px;
+    border-radius: 30px;
+    display: grid;
+    grid-template-rows: 2em 1fr 2fr 1fr 4em;
+    overflow: hidden;
+    border-left: 2px solid var(--dark);
+    border-right: 2px solid var(--dark);
+    border-top: 2px solid var(--dark);
+
+    --console-color: #21b947;
+    --brown: #050505;
+    --dark: #050505;
+}
+
+.header {
+    font-size: 1em;
+}
+.header h1{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+a {
+    transition: 0.3s linear;
+}
+
+a:hover {
+    background: var(--dark);
+    color: #f9f3e3;
+}
+
+.purpose {
+    padding-left: 1em;
+    font-family: 'Source Code Pro', monospace;
+}
+
+#submit{
+    height: 25px;
+    width: 25px;
+    border-color: var(--brown);
+    border-radius: 15px;
+}
+
+#string{
+    border-color: var(--brown);
+    border-radius: 15px;
+    height: 20px;
+}
+
+.string {
+    font-family: 'Source Code Pro', monospace;
+    max-height: 40px;
+    border-bottom: 2px solid var(--dark);
+}
+
+.digit-list {
+    border-bottom: 2px solid var(--brown);
+    border-top: 2px solid var(--brown);
+    display: flex;
+    align-items: flex-start;
+    height: 80px;
+    background-color: rgba(72, 152, 172, 0.26);
+}
+
+.digit {
+    align-items: center;
+    background: #ffffff;
+    border-bottom: 12px solid var(--brown);
+    border-left: 12px solid #ffffff;
+    border-right: 12px solid var(--brown);
+    border-top: 12px solid var(--brown);
+    box-sizing: border-box;
+    display: flex;
+    font-size: 1.5em;
+    color: var(--console-color);
+    height: 80px;
+    justify-content: center;
+    position: relative;
+    width: 80px;
+}
+
+.digit:before {
+    border: 2px solid var(--brown);
+    content: '';
+    height: 55px;
+    left: 0;
+    position: absolute;
+}
+
+.caret {
+    width: 50px;
+    height: 15px;
+    background: #fbfbfb;
+    border: 3px solid var(--brown);
+    position: relative;
+    transition: left 1s linear;
+    left: 10px;
+}
+
+.status {
+    background: var(--dark);
+    color: var(--console-color);
+    padding: 10px;
+}
+
+.status:before {
+    content: '...';
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    background: var(--dark);
+    color: var(--console-color);
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.reload {
+    right: 0;
+    top: 0;
+}
+
+.btn:hover {
+    color: var(--dark);
+    background: var(--console-color);
+}
+
+
+footer{
+    width: 100%;
+    align-self: flex-end;
+}
+footer h2{
+    margin-bottom: 10px;
+}
+footer ul{
+    margin-left: 60px;
+    list-style: circle;
+}

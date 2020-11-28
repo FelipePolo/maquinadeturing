@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Maquina de Turing</title>
+  <link rel="stylesheet" href="./style.css" />
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="btn reload" onclick="reload()">&#x21bb;</div>
+    <div class="header">
+      <h1>Maquina de turing</h1>
+    </div>
+    <div class="purpose" ><br> operacion: cambiar b por a</div>
+    <div class="string">
+      <label>Escribe una cadena: </label>
+      <input type="text" class="purpose" id="string" />
+      <button id="submit" onclick="begin()">►</button>
+    </div>
+
+    <div class="digit-list" id="digit-list">
+    </div>
+
+    <div class="caret"></div>
+    <div class="status">Listo...</div>
+  </div>
+
+  <footer>
+    <h2>Realizado por:</h2>
+    <ul>
+      <li>Ana Maria Buena hora Diaz</li>
+      <li>Ernesto Felipe Polo Prada</li>
+      <li>Andres Valencia</li>
+      <li>Evert Jose Reales</li>
+    </ul>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
