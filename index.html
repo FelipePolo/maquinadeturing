@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <title>Maquina de Turing</title>
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="Styles/style.css" />
+  <script type="text/javascript" src="Styles/vis.js"></script>
+  <!-- Estilos del GRAFO-->
+  <link href="Styles/vis-network.min.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -14,7 +17,48 @@
     <div class="header">
       <h1>Maquina de turing</h1>
     </div>
-    <div class="purpose" ><br> operacion: cambiar b por a</div>
+    <div class="purpose" >operacion: cambiar b por a</div>
+    <div id = "mynetwork">
+      </div><script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet([
+    { id: 1, label: "Q1" },
+    { id: 2, label: "Q2" },
+    { id: 3, label: "Q3" }
+  ]);
+
+  // create an array with edges
+  var edges = new vis.DataSet([
+    { from: 1, to: 2 },
+    { from: 2, to: 3 },
+    { from: 1, to: 1 },
+    { from: 1, to: 1 },
+    { from: 2, to: 2 }
+  ]);
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+
+  var options = {
+  nodes: {
+    shape: "dot",
+    size: 30,
+    font: {
+      size: 32,
+    },
+    borderWidth: 2,
+    shadow: true,
+  },
+  edges: {
+    width: 2,
+    shadow: true,
+  },};
+  var network = new vis.Network(container, data, options);
+</script>
     <div class="string">
       <label>Escribe una cadena: </label>
       <input type="text" class="purpose" id="string" />
@@ -31,7 +75,7 @@
   <footer>
     <h2>Realizado por:</h2>
     <ul>
-      <li>Ana Maria Buena hora Diaz</li>
+      <li>Ana Maria Buenahora Diaz</li>
       <li>Ernesto Felipe Polo Prada</li>
       <li>Andres Valencia</li>
       <li>Evert Jose Reales</li>
@@ -39,6 +83,8 @@
   </footer>
 
   <script src="./script.js"></script>
+  
+  <link href="Styles/vis-network.min.css" rel="stylesheet" type="text/css" />
 </body>
 
 </html>
