@@ -5,9 +5,10 @@
   <meta charset="UTF-8" />
   <title>Maquina de Turing</title>
   <link rel="stylesheet" href="Styles/style.css" />
-  <script type="text/javascript" src="Styles/vis.js"></script>
-  <!-- Estilos del GRAFO-->
-  <link href="Styles/vis-network.min.css" rel="stylesheet" type="text/css" />
+     <script
+      type="text/javascript"
+      src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+    ></script> 
 
 </head>
 
@@ -17,36 +18,19 @@
     <div class="header">
       <h1>Maquina de turing</h1>
     </div>
-    <div class="purpose" >operacion: cambiar b por a</div>
+    <div class="purpose" > <span>operacion:<span/> cambiar b por a</div>
     <div id = "mynetwork">
-      </div><script type="text/javascript">
+      </div>
+      <script type="text/javascript">
   // create an array with nodes
-  var nodes = new vis.DataSet([
-    { id: 1, label: "Q1" },
-    { id: 2, label: "Q2" },
-    { id: 3, label: "Q3" }
-  ]);
+ var container = document.getElementById("mynetwork");
+var dot = 'dinetwork {node[shape=circle]; 1 -> 2 [label="B>B, L"]; 2 -> 3[label="B>B, R"]; 1 -> 1[label="B>B, L"];1 -> 1[label="a>a, R"]; 2 -> 2[label="a>a, L"]}';
+var data = vis.parseDOTNetwork(dot);
 
-  // create an array with edges
-  var edges = new vis.DataSet([
-    { from: 1, to: 2 },
-    { from: 2, to: 3 },
-    { from: 1, to: 1 },
-    { from: 1, to: 1 },
-    { from: 2, to: 2 }
-  ]);
-
-  // create a network
-  var container = document.getElementById('mynetwork');
-  var data = {
-    nodes: nodes,
-    edges: edges
-  };
-
-  var options = {
+var options = {
   nodes: {
     shape: "dot",
-    size: 30,
+    size: 50,
     font: {
       size: 32,
     },
@@ -54,10 +38,12 @@
     shadow: true,
   },
   edges: {
-    width: 2,
+    width: 5,
+    length: 205,
     shadow: true,
-  },};
-  var network = new vis.Network(container, data, options);
+  },
+};
+var network = new vis.Network(container, data, options);
 </script>
     <div class="string">
       <label>Escribe una cadena: </label>
@@ -77,14 +63,12 @@
     <ul>
       <li>Ana Maria Buenahora Diaz</li>
       <li>Ernesto Felipe Polo Prada</li>
-      <li>Andres Valencia</li>
-      <li>Evert Jose Reales</li>
+      <li>Andres Eduardo Valencia Gomez</li>
+      <li>Ever Jose Reales</li>
     </ul>
   </footer>
 
   <script src="./script.js"></script>
-  
-  <link href="Styles/vis-network.min.css" rel="stylesheet" type="text/css" />
 </body>
 
 </html>
