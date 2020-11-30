@@ -10,7 +10,7 @@
 
 #mynetwork {
     width: 400px;
-    height: 200px;
+    height: 350px;
     border: 1px solid lightgray;
   }
 
@@ -19,13 +19,13 @@ body{
     display: flex;
     justify-content: center;
     background-color: transparent;
-    background-image: url("./imgs/fondo-web-nexun.jpg");
+    background-image: url("../imgs/fondo-web-nexun.jpg");
     background-position: center;
 }
 
 .container {
     position: absolute;
-    height: 590px;
+    height: 595px;
     width: 800px;
     margin: 10px;
     margin-top: 25px;

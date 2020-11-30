@@ -3,7 +3,7 @@ const LOADED = 'cargado!'
 const WAIT = 'Esperando...'
 let isCounting = false
 let line = []
-let caretpos = 0
+let caretpos = 0 // posicion carrete (creo)
 let initx = true
 
 
@@ -13,7 +13,6 @@ begin = () => {
 
 
 setCaret = () => {
-
 
     const digitBlockWidth = 80
     const caretWidth = 50
@@ -38,7 +37,7 @@ init = () => {
     const str = document.getElementById('string').value
 
     
-    if (!re.test(str)) {
+    if (!re.test(str)) { //valida
         alert('no valida')
         return
     }
@@ -51,7 +50,6 @@ init = () => {
         child.classList.add("digit")
         parent.appendChild(child)
     }
-
 
     
     document.querySelectorAll('.digit').forEach((block, inx) => {
@@ -103,6 +101,7 @@ setStatus = (status, delay = 1200) => {
 start = () => {
     isCounting = true
     document.querySelectorAll('.digit').forEach((block, inx) => {
+        
         window.setTimeout(() => {
             document.querySelector('.status').innerHTML = 'moviendo la cinta...'
             setStatus('leyendo cinta...', 1100)
@@ -110,7 +109,6 @@ start = () => {
             caretpos = inx
             console.log('b'.includes(line[inx]));
             setCaret()
-
             
             if ('b'.includes(line[inx])) {
                 setStatus('sobreescribiendo a ', 1800)
