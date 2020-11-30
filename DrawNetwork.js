@@ -1,6 +1,6 @@
 
 var container = document.getElementById("mynetwork");
-var dot = 'dinetwork {node[shape=circle]; 1 -> 2 [label="B>B, L"]; 2 -> 3[label="B>B, R"]; 1 -> 1[label="b>a, R|a>a, R"]; 2 -> 2[label="a>a, L"]; 3[ borderWidth=7]}';
+var dot = 'dinetwork {node[shape=circle]; 1 -> 2 [label="B, B, L"]; 2 -> 3[label="B, B, R"]; 1 -> 1[label="b, a, R|a, a, R"]; 2 -> 2[label="a, a, L"]; 3[ borderWidth=7]}';
 var data = vis.parseDOTNetwork(dot);
 
 var options = {
@@ -31,11 +31,11 @@ var options = {
 
 var network = new vis.Network(container, data, options);
 
-
+// Esto se repite cada 2 segundos
 setInterval(()=>{
-
   if(isCounting){
-var dot1 = 'dinetwork {node[shape=circle]; 1 -> 2 [label="B>B, L"]; 2 -> 3[label="B>B, R"]; 1 -> 1[label="b>a, R|a>a, R"]; 2 -> 2[label="a>a, L"]; 3[ borderWidth=7];';
+    // cuando se empieza a hacer el movimiento de la cinta se hace esto:
+var dot1 = 'dinetwork {node[shape=circle]; 1 -> 2 [label="B, B, L"]; 2 -> 3[label="B, B, R"]; 1 -> 1[label="b, a, R|a, a, R"]; 2 -> 2[label="a, a, L"]; 3[ borderWidth=7];';
 
 var data = vis.parseDOTNetwork(dot);
 if(isCounting){
