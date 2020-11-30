@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -21,30 +21,6 @@
     <div class="purpose" > <span>operacion:<span/> cambiar b por a</div>
     <div id = "mynetwork">
       </div>
-      <script type="text/javascript">
-  // create an array with nodes
- var container = document.getElementById("mynetwork");
-var dot = 'dinetwork {node[shape=circle]; 1 -> 2 [label="B>B, L"]; 2 -> 3[label="B>B, R"]; 1 -> 1[label="B>B, L"];1 -> 1[label="a>a, R"]; 2 -> 2[label="a>a, L"]}';
-var data = vis.parseDOTNetwork(dot);
-
-var options = {
-  nodes: {
-    shape: "dot",
-    size: 50,
-    font: {
-      size: 32,
-    },
-    borderWidth: 2,
-    shadow: true,
-  },
-  edges: {
-    width: 5,
-    length: 205,
-    shadow: true,
-  },
-};
-var network = new vis.Network(container, data, options);
-</script>
     <div class="string">
       <label>Escribe una cadena: </label>
       <input type="text" class="purpose" id="string" />
@@ -69,6 +45,8 @@ var network = new vis.Network(container, data, options);
   </footer>
 
   <script src="./script.js"></script>
+  
+      <script src="./DrawNetwork.js"> </script>
 </body>
 
 </html>
