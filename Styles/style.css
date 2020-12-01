@@ -97,8 +97,10 @@ a:hover {
     border-top: 2px solid var(--brown);
     display: flex;
     align-items: flex-start;
-    height: 80px;
+    height: 95px;
     background-color: rgba(72, 152, 172, 0.26);
+    white-space: nowrap; 
+    overflow: auto;
 }
 
 .digit {
